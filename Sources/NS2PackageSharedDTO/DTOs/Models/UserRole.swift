@@ -7,7 +7,11 @@
 
 import Foundation
 
-public enum UserRole: String, Codable {
+public enum UserRole: String, Codable, CustomStringConvertible {
     case admin
     case user
+
+    public var description: String {
+        return self.rawValue
+    }
 }
