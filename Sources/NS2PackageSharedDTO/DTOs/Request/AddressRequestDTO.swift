@@ -20,4 +20,3 @@ public struct AddressRequestDTO: Codable {
         self.numeration = numeration
     }
 }
-

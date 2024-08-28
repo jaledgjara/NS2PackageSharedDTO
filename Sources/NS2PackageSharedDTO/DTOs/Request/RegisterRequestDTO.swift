@@ -4,15 +4,13 @@
 //
 //  Created by Jaled Jara on 8/28/24.
 //
-import Foundation
-
 public struct RegisterRequestDTO: Codable {
     public let email: String
     public let username: String
     public let password: String
     public let phoneNumber: String
     public let addresses: [AddressRequestDTO]
-    public let role: UserRole // Añadido el rol aquí
+    public let role: UserRole
     
     public init(email: String, username: String, password: String, phoneNumber: String, addresses: [AddressRequestDTO], role: UserRole) {
         self.email = email
