@@ -50,4 +50,24 @@ public enum ProductCategory: CaseIterable, Identifiable, Codable, Hashable {
             return "stethoscope"
         }
     }
+    
+    // Inicializador desde una cadena
+     public init?(title: String) {
+         switch title {
+         case "Personal Care":
+             self = .personalCare
+         case "Supplements":
+             self = .supplementsVitamins
+         case "Baby Care":
+             self = .babyCareMaternity
+         case "Hair Care":
+             self = .hairCare
+         case "Skin Care":
+             self = .skinCare
+         case "Accessories":
+             self = .medicalAccessories
+         default:
+             return nil
+         }
+     }
 }
