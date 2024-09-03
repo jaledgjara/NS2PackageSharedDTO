@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProductCategory: CaseIterable, Identifiable {
+public enum ProductCategory: CaseIterable, Identifiable, Codable, Hashable {
     case personalCare
     case supplementsVitamins
     case babyCareMaternity
@@ -15,9 +15,9 @@ enum ProductCategory: CaseIterable, Identifiable {
     case skinCare
     case medicalAccessories
 
-    var id: Self { self }
+    public var id: Self { self }
     
-    var title: String {
+    public var title: String {
         switch self {
         case .personalCare:
             return "Personal Care"
@@ -34,7 +34,7 @@ enum ProductCategory: CaseIterable, Identifiable {
         }
     }
 
-    var imageTitle: String {
+    public var imageTitle: String {
         switch self {
         case .personalCare:
             return "figure.dress.line.vertical.figure"

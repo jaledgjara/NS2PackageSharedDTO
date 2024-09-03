@@ -1,10 +1,9 @@
 //
-//  File.swift
-//  
+//  ProductRequestDTO.swift
+//
 //
 //  Created by Jaled Jara on 9/3/24.
 //
-
 import Foundation
 
 public struct ProductRequestDTO: Codable {
@@ -15,8 +14,9 @@ public struct ProductRequestDTO: Codable {
     public let rating: Double
     public let isOnDiscount: Bool
     public let discountPercentage: Double?
+    public let category: ProductCategory
 
-    public init(image: String, title: String, description: String, price: Double, rating: Double, isOnDiscount: Bool, discountPercentage: Double? = nil) {
+    public init(image: String, title: String, description: String, price: Double, rating: Double, isOnDiscount: Bool, discountPercentage: Double? = nil, category: ProductCategory) {
         self.image = image
         self.title = title
         self.description = description
@@ -24,5 +24,6 @@ public struct ProductRequestDTO: Codable {
         self.rating = rating
         self.isOnDiscount = isOnDiscount
         self.discountPercentage = discountPercentage
+        self.category = category
     }
 }

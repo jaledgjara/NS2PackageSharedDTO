@@ -1,6 +1,6 @@
 //
 //  ProductResponseDTO.swift
-//  
+//
 //
 //  Created by Jaled Jara on 9/3/24.
 //
@@ -17,8 +17,9 @@ public struct ProductResponseDTO: Codable {
     public let rating: Double
     public let isOnDiscount: Bool
     public let discountPercentage: Double?
+    public let category: ProductCategory
 
-    public init(id: UUID, userId: UUID, image: String, title: String, description: String, price: Double, rating: Double, isOnDiscount: Bool, discountPercentage: Double? = nil) {
+    public init(id: UUID, userId: UUID, image: String, title: String, description: String, price: Double, rating: Double, isOnDiscount: Bool, discountPercentage: Double? = nil, category: ProductCategory) {
         self.id = id
         self.userId = userId
         self.image = image
@@ -28,6 +29,7 @@ public struct ProductResponseDTO: Codable {
         self.rating = rating
         self.isOnDiscount = isOnDiscount
         self.discountPercentage = discountPercentage
+        self.category = category
     }
 }
 
