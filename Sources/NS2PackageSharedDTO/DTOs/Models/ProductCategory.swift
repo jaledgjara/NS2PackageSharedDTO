@@ -6,33 +6,17 @@
 //
 
 import Foundation
+import Foundation
 
-public enum ProductCategory: CaseIterable, Identifiable, Codable, Hashable {
-    case personalCare
-    case supplementsVitamins
-    case babyCareMaternity
-    case hairCare
-    case skinCare
-    case medicalAccessories
+public enum ProductCategory: String, CaseIterable, Identifiable, Codable, Hashable {
+    case personalCare = "Personal Care"
+    case supplementsVitamins = "Supplements"
+    case babyCareMaternity = "Baby Care"
+    case hairCare = "Hair Care"
+    case skinCare = "Skin Care"
+    case medicalAccessories = "Accessories"
 
     public var id: Self { self }
-    
-    public var title: String {
-        switch self {
-        case .personalCare:
-            return "Personal Care"
-        case .supplementsVitamins:
-            return "Supplements"
-        case .babyCareMaternity:
-            return "Baby Care"
-        case .hairCare:
-            return "Hair Care"
-        case .skinCare:
-            return "Skin Care"
-        case .medicalAccessories:
-            return "Accessories"
-        }
-    }
 
     public var imageTitle: String {
         switch self {
@@ -51,23 +35,8 @@ public enum ProductCategory: CaseIterable, Identifiable, Codable, Hashable {
         }
     }
     
-    // Inicializador desde una cadena
-     public init?(title: String) {
-         switch title {
-         case "Personal Care":
-             self = .personalCare
-         case "Supplements":
-             self = .supplementsVitamins
-         case "Baby Care":
-             self = .babyCareMaternity
-         case "Hair Care":
-             self = .hairCare
-         case "Skin Care":
-             self = .skinCare
-         case "Accessories":
-             self = .medicalAccessories
-         default:
-             return nil
-         }
-     }
+    // Esto permite que el enum se decodifique desde una cadena.
+    public init?(title: String) {
+        self.init(rawValue: title)
+    }
 }
