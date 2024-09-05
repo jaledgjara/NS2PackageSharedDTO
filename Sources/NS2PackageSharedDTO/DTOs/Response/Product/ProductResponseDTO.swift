@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ProductResponseDTO: Codable {
+public struct ProductResponseDTO: Codable, Hashable {
     public let id: UUID
     public let userId: UUID
     public let image: String
