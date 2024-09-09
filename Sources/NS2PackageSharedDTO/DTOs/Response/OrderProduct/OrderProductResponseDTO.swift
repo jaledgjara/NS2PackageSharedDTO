@@ -1,13 +1,13 @@
 //
 //  OrderProductResponseDTO.swift
-//  
+//
 //
 //  Created by Jaled Jara on 9/9/24.
 //
 
 import Foundation
 
-struct OrderProductResponseDTO: Codable, Hashable, Identifiable {
+struct OrderProductResponseDTO: Codable {
     public var id: UUID?
     public var orderId: UUID
     public var productId: UUID

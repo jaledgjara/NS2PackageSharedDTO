@@ -1,5 +1,5 @@
 //
-//  OrderProductRequestDTO.swift
+//  File.swift
 //  
 //
 //  Created by Jaled Jara on 9/9/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OrderProductRequestDTO: Codable, Hashable {
+struct OrderProductRequestDTO: Codable {
     public var productId: UUID
     public var quantityProducts: Int
     public var price: Double
@@ -18,4 +18,3 @@ struct OrderProductRequestDTO: Codable, Hashable {
         self.price = price
     }
 }
-

@@ -1,13 +1,13 @@
 //
-//  OrderRequestDTO.swift
-//
+//  File.swift
+//  
 //
 //  Created by Jaled Jara on 9/9/24.
 //
 
 import Foundation
 
-struct OrderRequestDTO: Codable, Hashable {
+struct OrderRequestDTO: Codable {
     public var userId: UUID
     public var totalAmount: Double
     public var isPaid: Bool

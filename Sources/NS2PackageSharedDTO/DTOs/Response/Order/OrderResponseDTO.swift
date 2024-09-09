@@ -1,5 +1,5 @@
 //
-//  OrderResponseDTO.swift
+//  File.swift
 //  
 //
 //  Created by Jaled Jara on 9/9/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OrderResponseDTO: Identifiable ,Codable, Hashable {
+struct OrderResponseDTO: Codable {
     public var id: UUID?
     public var userId: UUID
     public var totalAmount: Double
