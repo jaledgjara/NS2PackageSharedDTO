@@ -13,10 +13,10 @@ public struct OrderResponseDTO: Codable {
     public var totalAmount: Double
     public var isPaid: Bool
     public var createdAt: Date
-    public var status: String
+    public var status: OrderStatus
     public var orderProducts: [OrderProductResponseDTO]
 
-    public init(id: UUID? = nil, userId: UUID, totalAmount: Double, isPaid: Bool, createdAt: Date, status: String, orderProducts: [OrderProductResponseDTO]) {
+    public init(id: UUID? = nil, userId: UUID, totalAmount: Double, isPaid: Bool, createdAt: Date, status: OrderStatus, orderProducts: [OrderProductResponseDTO]) {
         self.id = id
         self.userId = userId
         self.totalAmount = totalAmount
