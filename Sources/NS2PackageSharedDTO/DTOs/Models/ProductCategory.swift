@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 
 public enum ProductCategory: String, CaseIterable, Identifiable, Codable, Hashable {
     case personalCare = "Personal Care"
@@ -35,7 +34,6 @@ public enum ProductCategory: String, CaseIterable, Identifiable, Codable, Hashab
         }
     }
     
-    // Esto permite que el enum se decodifique desde una cadena.
     public init?(title: String) {
         self.init(rawValue: title)
     }
