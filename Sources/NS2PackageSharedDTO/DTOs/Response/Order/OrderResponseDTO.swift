@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct OrderResponseDTO: Codable {
+public struct OrderResponseDTO: Codable, Hashable {
     public var id: UUID?
     public var userId: UUID
     public var totalAmount: Double
