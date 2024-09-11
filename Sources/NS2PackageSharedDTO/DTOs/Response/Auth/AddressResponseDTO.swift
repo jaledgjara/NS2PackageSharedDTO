@@ -13,10 +13,9 @@ public struct AddressResponseDTO: Codable {
     public let state: String
     public let zipCode: String
 
-    public init(id: UUID? = nil, street: String, city: String, state: String, zipCode: String) {
+    public init(id: UUID? = nil, street: String, state: String, zipCode: String) {
         self.id = id
         self.street = street
-        self.city = city
         self.state = state
         self.zipCode = zipCode
     }
