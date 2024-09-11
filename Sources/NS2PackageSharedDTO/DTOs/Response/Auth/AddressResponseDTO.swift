@@ -10,7 +10,6 @@ import Foundation
 public struct AddressResponseDTO: Codable {
     public var id: UUID?
     public let street: String
-    public let city: String
     public let state: String
     public let zipCode: String
 
