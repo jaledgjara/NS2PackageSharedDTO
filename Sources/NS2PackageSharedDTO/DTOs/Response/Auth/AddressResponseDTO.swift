@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AddressResponseDTO: Codable {
+public struct AddressResponseDTO: Codable, Hashable, Identifiable {
     public var id: UUID?
     public let street: String
     public let state: String
