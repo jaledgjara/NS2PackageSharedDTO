@@ -8,12 +8,10 @@
 import Foundation
 
 public struct PaymentRequestDTO: Codable, Hashable {
-    public let userId: UUID
     public let totalAmount: Double
     public let paymentMethod: String
     
-    public init(userId: UUID, totalAmount: Double, paymentMethod: String) {
-        self.userId = userId
+    public init(totalAmount: Double, paymentMethod: String) {
         self.totalAmount = totalAmount
         self.paymentMethod = paymentMethod
     }
