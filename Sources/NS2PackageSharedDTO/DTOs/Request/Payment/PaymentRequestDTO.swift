@@ -18,3 +18,13 @@ public struct PaymentRequestDTO: Codable, Hashable {
         self.payerEmail = payerEmail
     }
 }
+
+public struct CreatePaymentRequestDTO: Codable, Hashable {
+    public let orderRequest: OrderProductRequestDTO
+    public let paymentRequest: PaymentRequestDTO
+
+    public init(orderRequest: OrderProductRequestDTO, paymentRequest: PaymentRequestDTO) {
+        self.orderRequest = orderRequest
+        self.paymentRequest = paymentRequest
+    }
+}

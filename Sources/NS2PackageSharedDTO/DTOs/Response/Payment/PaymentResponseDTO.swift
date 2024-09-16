@@ -18,3 +18,4 @@ public struct PaymentResponseDTO: Codable, Hashable {
         self.mercadoPagoUrl = mercadoPagoUrl
     }
 }
+
