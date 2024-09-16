@@ -10,9 +10,11 @@ import Foundation
 public struct PaymentRequestDTO: Codable, Hashable {
     public let totalAmount: Double
     public let paymentMethod: String
+    public let payerEmail: String
     
-    public init(totalAmount: Double, paymentMethod: String) {
+    public init(totalAmount: Double, paymentMethod: String, payerEmail: String) {
         self.totalAmount = totalAmount
         self.paymentMethod = paymentMethod
+        self.payerEmail = payerEmail
     }
 }

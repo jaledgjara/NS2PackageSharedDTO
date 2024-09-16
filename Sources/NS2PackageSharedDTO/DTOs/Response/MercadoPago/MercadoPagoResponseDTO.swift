@@ -20,3 +20,4 @@ public struct MercadoPagoResponseDTO: Codable, Hashable {
         self.initPoint = initPoint
     }
 }
+
