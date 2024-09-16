@@ -11,7 +11,7 @@ public struct MercadoPagoResponseDTO: Codable, Hashable {
     public let id: String
     public let status: String
     public let statusDetail: String
-    public let initPoint: String
+    public let initPoint: String?
 
     public init(id: String, status: String, statusDetail: String, initPoint: String) {
         self.id = id
